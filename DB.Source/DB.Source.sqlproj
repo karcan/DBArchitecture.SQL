@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DB.Source</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{26b022e9-8b2c-4b94-9324-7dcffff839a6}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DB.Source</RootNamespace>
+    <AssemblyName>DB.Source</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>True</GenerateCreateScript>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Storage" />
+    <Folder Include="Security" />
+    <Folder Include="Programmability" />
+    <Folder Include="Programmability\Sequences" />
+    <Folder Include="Programmability\Schemas" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Security\Security Policies" />
+    <Folder Include="Storage\Partition Schemas" />
+    <Folder Include="Storage\Partition Functions" />
+    <Folder Include="Storage\Filegroups" />
+    <Folder Include="Storage\Filegroup Files" />
+    <Folder Include="Programmability\Schemas\dbo" />
+    <Folder Include="Programmability\Schemas\dbo\Functions" />
+    <Folder Include="Programmability\Schemas\SystemConstant" />
+    <Folder Include="Programmability\Schemas\SystemConstant\Functions" />
+    <Folder Include="Programmability\Schemas\Session" />
+    <Folder Include="Programmability\Schemas\Session\Functions" />
+    <Folder Include="Programmability\Schemas\User" />
+    <Folder Include="Programmability\Schemas\User\Functions" />
+    <Folder Include="Programmability\Schemas\User\Types" />
+    <Folder Include="Programmability\Schemas\User\Stored Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\User.sql" />
+    <Build Include="Tables\SystemConstant.sql" />
+    <Build Include="Views\V_User.sql" />
+    <Build Include="Views\V_SystemConstant.sql" />
+    <Build Include="Tables\Language.sql" />
+    <Build Include="Security\Schemas\SystemConstant.sql" />
+    <Build Include="Security\Schemas\Session.sql" />
+    <Build Include="Security\Schemas\User.sql" />
+    <Build Include="Programmability\Schemas\User\Functions\FN_CheckIfUsernameIsUnique.sql" />
+    <Build Include="Programmability\Schemas\User\Functions\FN_CheckIfEmailIsUnique.sql" />
+    <Build Include="Programmability\Schemas\Session\Functions\FN_GetCurrentCultureISO.sql" />
+    <Build Include="Programmability\Schemas\Session\Functions\FN_GetCurrentLanguageID.sql" />
+    <Build Include="Programmability\Schemas\Session\Functions\FN_GetCurrentUserID.sql" />
+    <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultCultureISO.sql" />
+    <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultLanguageID.sql" />
+    <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultLoVScrollSize.sql" />
+    <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultPageNumber.sql" />
+    <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultPageRowSize.sql" />
+    <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetSystemConstantByCode.sql" />
+    <Build Include="Programmability\Schemas\User\Types\DT_Username.sql" />
+    <Build Include="Programmability\Schemas\User\Types\DT_Email.sql" />
+    <Build Include="Programmability\Schemas\User\Stored Procedures\SP_UserInsert.sql" />
+  </ItemGroup>
+</Project>

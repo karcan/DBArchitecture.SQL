@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Language]
+(
+	[ID]		SMALLINT		IDENTITY(1, 1),
+	[ISO]		NVARCHAR(5)		NOT NULL,
+
+)

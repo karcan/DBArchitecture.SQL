@@ -1,0 +1,3 @@
+﻿CREATE TYPE [User].[DT_Username]
+	FROM
+	NVARCHAR(50) NOT NULL
