@@ -2,5 +2,5 @@
 RETURNS BIGINT
 AS
 BEGIN
-	RETURN [SystemConstant].[FN_GetSystemConstantByCode]('Default:PageRowSize')
+	RETURN CAST([SystemConstant].[FN_GetSystemConstantByCode]('Default:PageRowSize') AS BIGINT)
 END

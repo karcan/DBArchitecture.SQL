@@ -2,5 +2,5 @@
 RETURNS NVARCHAR(5)
 AS
 BEGIN
-	RETURN [SystemConstant].[FN_GetSystemConstantByCode]('Default:CultureISO')
+	RETURN CAST([SystemConstant].[FN_GetSystemConstantByCode]('Default:CultureISO') AS NVARCHAR(5))
 END

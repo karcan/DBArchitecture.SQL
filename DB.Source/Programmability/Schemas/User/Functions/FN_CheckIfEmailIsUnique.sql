@@ -1,7 +1,7 @@
 ﻿CREATE FUNCTION [User].[FN_CheckIfEmailIsUnique]
 (
 	@pUserID	INT					= NULL,
-	@pEmail		[User].[DT_Email]
+	@pEmail		[dbo].[DT_Email]
 )
 RETURNS @vReturnTable TABLE
 (
