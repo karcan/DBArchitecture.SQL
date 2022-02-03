@@ -115,6 +115,9 @@
     <Build Include="Programmability\Schemas\dbo\Types\DT_FirstName.sql" />
     <Build Include="Programmability\Schemas\dbo\Types\DT_LastName.sql" />
     <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultPasswordExpirationDay.sql" />
+    <Build Include="Tables\LanguageSourceData.sql" />
+    <Build Include="Tables\LanguageSourceUI.sql" />
+    <Build Include="Tables\LanguageSourceParameterized.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\150\SqlSchemas\master.dacpac">
