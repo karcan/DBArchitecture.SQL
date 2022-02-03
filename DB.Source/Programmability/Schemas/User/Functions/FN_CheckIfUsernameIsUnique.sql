@@ -1,7 +1,7 @@
 ﻿CREATE FUNCTION [User].[FN_CheckIfUsernameIsUnique]
 (
 	@pUserID	INT						= NULL,
-	@pUsername	[User].[DT_Username]
+	@pUsername	[dbo].[DT_Username]
 )
 RETURNS @vReturnTable TABLE
 (

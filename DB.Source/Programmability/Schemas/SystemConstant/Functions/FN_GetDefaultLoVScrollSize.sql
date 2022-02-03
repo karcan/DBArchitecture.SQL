@@ -2,5 +2,5 @@
 RETURNS TINYINT
 AS
 BEGIN
-	RETURN [SystemConstant].[FN_GetSystemConstantByCode]('Default:LoVScrollSize')
+	RETURN CAST([SystemConstant].[FN_GetSystemConstantByCode]('Default:LoVScrollSize') AS TINYINT)
 END

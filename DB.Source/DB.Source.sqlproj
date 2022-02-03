@@ -23,6 +23,8 @@
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <GenerateCreateScript>True</GenerateCreateScript>
+    <Recovery>SIMPLE</Recovery>
+    <ServiceBrokerOption>NewBroker</ServiceBrokerOption>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -48,6 +50,7 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+    <SqlCodeAnalysisRules>-Microsoft.Rules.Data.SR0016</SqlCodeAnalysisRules>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -82,6 +85,8 @@
     <Folder Include="Programmability\Schemas\User\Functions" />
     <Folder Include="Programmability\Schemas\User\Types" />
     <Folder Include="Programmability\Schemas\User\Stored Procedures" />
+    <Folder Include="Triggers" />
+    <Folder Include="Programmability\Schemas\dbo\Types" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
@@ -103,8 +108,22 @@
     <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultPageNumber.sql" />
     <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultPageRowSize.sql" />
     <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetSystemConstantByCode.sql" />
-    <Build Include="Programmability\Schemas\User\Types\DT_Username.sql" />
-    <Build Include="Programmability\Schemas\User\Types\DT_Email.sql" />
     <Build Include="Programmability\Schemas\User\Stored Procedures\SP_UserInsert.sql" />
+    <Build Include="Triggers\TR_User_Log.sql" />
+    <Build Include="Programmability\Schemas\dbo\Types\DT_Email.sql" />
+    <Build Include="Programmability\Schemas\dbo\Types\DT_Username.sql" />
+    <Build Include="Programmability\Schemas\dbo\Types\DT_FirstName.sql" />
+    <Build Include="Programmability\Schemas\dbo\Types\DT_LastName.sql" />
+    <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultPasswordExpirationDay.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\150\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\150\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB.Source.publish.xml" />
   </ItemGroup>
 </Project>

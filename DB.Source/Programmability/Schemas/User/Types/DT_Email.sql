@@ -1,3 +1,0 @@
-﻿CREATE TYPE [User].[DT_Email]
-	FROM 
-	NVARCHAR(320) NOT NULL

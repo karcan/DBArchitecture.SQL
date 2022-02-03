@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[DT_LastName]
+	FROM 
+	NVARCHAR(50)

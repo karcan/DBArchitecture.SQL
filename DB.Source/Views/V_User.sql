@@ -11,7 +11,6 @@
 		,[PhoneNumber]
 		,[LanguageID]
 		,[IsActive]
-		,[IsDeleted]
 		,[CreatedUserID]
 		,[CreatedDate]
 		,[ModifiedUserID]

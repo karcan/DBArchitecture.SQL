@@ -2,5 +2,5 @@
 RETURNS INT
 AS
 BEGIN
-	RETURN [SystemConstant].[FN_GetSystemConstantByCode]('Default:PageNumber')
+	RETURN CAST([SystemConstant].[FN_GetSystemConstantByCode]('Default:PageNumber') AS INT)
 END

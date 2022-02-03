@@ -2,5 +2,5 @@
 RETURNS TINYINT
 AS
 BEGIN
-	RETURN [SystemConstant].[FN_GetSystemConstantByCode]('Default:LanguageID')
+	RETURN CAST([SystemConstant].[FN_GetSystemConstantByCode]('Default:LanguageID') AS TINYINT)
 END

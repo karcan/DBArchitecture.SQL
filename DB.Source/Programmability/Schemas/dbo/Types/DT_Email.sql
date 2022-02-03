@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[DT_Email]
+	FROM 
+	NVARCHAR(320)
