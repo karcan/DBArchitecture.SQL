@@ -116,8 +116,12 @@
     <Build Include="Programmability\Schemas\dbo\Types\DT_LastName.sql" />
     <Build Include="Programmability\Schemas\SystemConstant\Functions\FN_GetDefaultPasswordExpirationDay.sql" />
     <Build Include="Tables\LanguageSourceData.sql" />
-    <Build Include="Tables\LanguageSourceUI.sql" />
+    <Build Include="Tables\LanguageSourceObject.sql" />
     <Build Include="Tables\LanguageSourceParameterized.sql" />
+    <Build Include="Tables\Country.sql" />
+    <Build Include="Tables\State.sql" />
+    <Build Include="Tables\City.sql" />
+    <Build Include="Programmability\Schemas\dbo\Functions\FN_GetCurrentProcedureName.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\150\SqlSchemas\master.dacpac">
