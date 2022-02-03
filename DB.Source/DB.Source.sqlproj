@@ -118,6 +118,9 @@
     <Build Include="Tables\LanguageSourceData.sql" />
     <Build Include="Tables\LanguageSourceUI.sql" />
     <Build Include="Tables\LanguageSourceParameterized.sql" />
+    <Build Include="Tables\Country.sql" />
+    <Build Include="Tables\State.sql" />
+    <Build Include="Tables\City.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\150\SqlSchemas\master.dacpac">
