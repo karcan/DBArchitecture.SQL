@@ -122,6 +122,11 @@
     <Build Include="Tables\State.sql" />
     <Build Include="Tables\City.sql" />
     <Build Include="Programmability\Schemas\dbo\Functions\FN_GetCurrentProcedureName.sql" />
+    <Build Include="Programmability\Schemas\dbo\Functions\FN_GetCurrentDatetime.sql" />
+    <Build Include="Programmability\Schemas\Session\Functions\FN_GetCurrentDatetime.sql" />
+    <Build Include="Tables\CurrencyHistory.sql" />
+    <Build Include="Tables\CurrencyCode.sql" />
+    <Build Include="Tables\ColumnData.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\150\SqlSchemas\master.dacpac">
